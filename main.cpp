@@ -49,7 +49,7 @@ int main(){
 void show_main_menu(){
     std::cout<<"\nMenu:\n"
     << "1. Create a new canvas\n"
-    << "2. Import a aanvas\n"
+    << "2. Import a canvas\n"
     << "3. Export a canvas\n"
     << "4. Add shape\n"
     << "5. Delete shape\n"
