@@ -2,6 +2,7 @@
 #include "GraphicsController.h"
 #include "canvas.h"
 #include "canvasView.h"
+void show_icon();
 void show_main_menu();
 void create_canvas(GraphicsController& controller);
 void import_canvas(GraphicsController& controller);
@@ -10,8 +11,8 @@ void add_shape(GraphicsController& controller);
 void delete_shape(GraphicsController& controller);
 void render_view(GraphicsController& controller);
 int main(){
-    std::cout<<"Welcome to the Vector Graphics Editor\n";
-    
+    std::cout<<"\nWelcome to the Vector Graphics Editor\n";
+    show_icon();
     auto canvas=std::make_shared<Canvas>();
     auto view = std::make_shared<CanvasView>();
     GraphicsController controller(canvas, view);
@@ -46,7 +47,9 @@ int main(){
     controller.renderView();*/
     return 0;
 }
-void show_main_menu(){
+
+void show_main_menu()
+{
     std::cout<<"\nMenu:\n"
     << "1. Create a new canvas\n"
     << "2. Import a canvas\n"
@@ -107,4 +110,31 @@ void delete_shape(GraphicsController &controller)
 void render_view(GraphicsController &controller)
 {
     controller.renderView();
+}
+
+void show_icon()
+{
+    std::cout << R"(
+ ________________________
+|.----------------------.|
+||                      ||
+||                      ||
+||     .-"````"-.       ||
+||    /  _.._    `\     ||
+||   / /`    `-.   ; . .||
+||   | |__  __  \   |   ||
+||.-.| | e`/e`  |   |   ||
+||   | |  |     |   |'--||
+||   | |  '-    |   |   ||
+||   |  \ --'  /|   |   ||
+||   |   `;---'\|   |   ||
+||   |    |     |   |   ||
+||   |  .-'     |   |   ||
+||'--|/`        |   |--.||
+||   ;    .     ;  _.\  ||
+||    `-.;_    /.-'     ||
+||         ````         ||
+||jgs___________________||
+'------------------------'
+    )" << std::endl;
 }
