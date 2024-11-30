@@ -5,12 +5,12 @@ GraphicsController::GraphicsController(const std::shared_ptr<Canvas> canv, const
 
 void GraphicsController::createNewCanvas(){
     canvas=std::make_shared<Canvas>();
-    std::cout<< "New document created.\n";
+    std::cout<< "New canvas created.\n";
 }
 
 void GraphicsController::importCanvas(const std::string& data){
     canvas->importFromFile(data);
-    std::cout<<"Document imported.\n";
+    std::cout<<"Canvas imported.\n";
 }
 
 void GraphicsController::exportCanvas() const{
